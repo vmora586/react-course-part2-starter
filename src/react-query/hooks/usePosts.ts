@@ -9,7 +9,6 @@ interface Post {
 }
 
 const usePosts = (userId: number | undefined) => {
-    console.log("userId: ", userId);
   return useQuery<Post[], Error>({
     queryKey: userId ? ["users", userId, "posts"] : ["posts"],
     queryFn: () =>
